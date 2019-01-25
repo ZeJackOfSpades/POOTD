@@ -1,3 +1,3 @@
 # MakefileCPP
 
-This is a makefile template made by @DarioFrello and @JacquesMonnier
+This is the TD#4 about structure 

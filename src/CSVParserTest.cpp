@@ -6,8 +6,7 @@
 	CSVParser	sContact;
 	bool resultInitWithFile;
 TEST_CASE("Test Ouverture Fichier et calcul","[initWithFile]"){
-	resultInitWithFile = sContact.initWithFile("/media/user/DATA/POLYTECH/LINUX_POLYTECH/"
-								  "ITII4/POO/TD/TD4_Structure/OtherFiles/sondage.csv");
+	resultInitWithFile = sContact.initWithFile("OtherFiles/sondage.csv");
 	REQUIRE( resultInitWithFile == true);
 }
 TEST_CASE("Check valeur numberOfRows","[initWithFile]"){
@@ -16,4 +15,9 @@ TEST_CASE("Check valeur numberOfRows","[initWithFile]"){
 	
 	*/
 	REQUIRE(sContact.numberOfRows == 21);
+}
+
+TEST_CASE("Check valeur numberOfColumns", "[initWithFile]"){
+
+	REQUIRE(sContact.numberOfColumns == 4);
 }

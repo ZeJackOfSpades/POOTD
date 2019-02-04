@@ -15,6 +15,8 @@ struct CSVParser
 */
 bool CSVParser::initWithFile(string cheminFichier){
 	char c;
+	bool lockFirstLine	=	false;
+
 	this->filepath	=	cheminFichier;
 
 	ifstream fichier (cheminFichier, std::ios::in);
@@ -25,10 +27,11 @@ bool CSVParser::initWithFile(string cheminFichier){
 	}
 	while(fichier.get(c)){
 			if(c == '\n'){
+				lockFirstLine = true;
 				this->numberOfRows += 1;
 				cout<<c<<endl;
 				cout<<"numberOfRows = "<<numberOfRows<<endl;
-			}else if(c== ','){
+			}else if(c== ',' && lockFirstLine == false){
 				this->numberOfColumns += 1;
 			}
 	}//end of while

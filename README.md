@@ -11,3 +11,6 @@ You can use the Makefile included in the project to compile the entire project
 2. Place your terminal in the downloaded directory
 *If you want to clean before make you can run this command : `make clean ; make`
 3. To run the program simply run this command : `./bin/test-csvparser.jack`  
+
+# Copyright 
+@ZeJackOfSpades

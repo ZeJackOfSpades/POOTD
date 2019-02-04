@@ -15,7 +15,7 @@ struct CSVParser
 */
 bool CSVParser::initWithFile(string cheminFichier){
 	char c;
-	bool lockFirstLine	=	false;
+	bool lockFirstLine	=	false; //used for count the number of colmns on the header only
 
 	this->filepath	=	cheminFichier;
 
@@ -38,18 +38,3 @@ bool CSVParser::initWithFile(string cheminFichier){
 	fichier.close();
 	return true;
 }
-
-/*
-while ((c = fgetc (fichier)) != EOF) {
-	if(c=='\n'){
-	    *yMap=*yMap+1;
-	    *xtot=*xMap;//pour eviter de compter le caractère \n
-	    *xMap=0;
-	}else if (c=='0' || c=='1' || c=='E' || c=='S'){
-	    map[*yMap][*xMap]=c;
-	    *xMap=*xMap+1;
-	}else{
-	    continue;
-	}
-}
-*/

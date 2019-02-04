@@ -10,10 +10,7 @@ TEST_CASE("Test Ouverture Fichier et calcul","[initWithFile]"){
 	REQUIRE( resultInitWithFile == true);
 }
 TEST_CASE("Check valeur numberOfRows","[initWithFile]"){
-/*	resultInitWithFile = sContact.initWithFile("/media/user/DATA/POLYTECH/LINUX_POLYTECH/"
-								  "ITII4/POO/TD/TD4_Structure/OtherFiles/sondage.csv");
-	
-	*/
+
 	REQUIRE(sContact.numberOfRows == 21);
 }
 

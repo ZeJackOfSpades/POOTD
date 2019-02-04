@@ -14,7 +14,7 @@ ASM?= 0
 CC=g++
 NAMEEXT=jack
 #name of the exe
-NAME=template
+NAME=test-csvparser
 #Dependancies
 DEPEND=dependencies
 BINDIR= bin

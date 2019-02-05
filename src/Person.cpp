@@ -5,7 +5,7 @@ struct Person
 	string	firstName;
 	string	phoneNumber;
 	float	answer;
-	string	nom;
+	string	name;
 
 	bool	hasValidPhoneNumber(void);
 
@@ -29,4 +29,28 @@ bool Person::hasValidPhoneNumber(void){
 	}
 	cout<<"OK"<<endl;
 	return true;
+}
+
+bool Person::hasValidNames(void){
+	bool validName 		=	true;
+	bool validFirstName	=	true;
+
+	for(unsigned int i = 0; i < (this->firstName).size() ; i++){
+		if(!isalpha(this->firstName[i])){
+			validName = false;
+			cout<<"Le prenom n'est pas correct !"<<endl;
+			
+		}
+	}
+	for(unsigned int i = 0; i < (this->name).size() ; i++){
+		if(!isalpha(this->name[i])){
+			validFirstName = false;
+			cout<<"Le name n'est pas correct !"<<endl;
+		}
+	}
+	if((validName && validFirstName) == false){
+		return false;
+	}else{
+		return true;
+	}
 }

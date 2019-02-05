@@ -10,8 +10,8 @@ struct Person
 	string	firstName;
 	string	phoneNumber;
 	float	answer;
-	string	nom;
+	string	name;
 
 	bool	hasValidPhoneNumber(void);
-
+	bool	hasValidNames(void);
 };

@@ -27,3 +27,25 @@ TEST_CASE("This is not a phone number","[hasValidPhoneNumber]"){
 	cout<<person1.phoneNumber<<endl;
 	REQUIRE(person1.hasValidPhoneNumber() == false);
 }
+
+TEST_CASE("The name is correct","[Person]"){
+	person1.name 		=	"Monnier";
+	person1.firstName	=	"Jacques";
+	REQUIRE(person1.hasValidNames() == true);
+}
+
+TEST_CASE("The Name is not correct","[Person]"){
+	person1.name 		=	"M0nnier";
+	person1.firstName	=	"Jacques";
+	REQUIRE(person1.hasValidNames() == false);
+}
+TEST_CASE("The firstName is not correct","[Person]"){
+	person1.name 		=	"Monnier";
+	person1.firstName	=	"J@cques";
+	REQUIRE(person1.hasValidNames() == false);
+}
+TEST_CASE("The firstName and name are not correct","[Person]"){
+	person1.name 		=	"M0nnier";
+	person1.firstName	=	"J@cques";
+	REQUIRE(person1.hasValidNames() == false);
+}

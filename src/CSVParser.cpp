@@ -15,9 +15,11 @@ struct CSVParser
 */
 bool CSVParser::initWithFile(string cheminFichier){
 	char c;
-	bool lockFirstLine	=	false; //used for count the number of colmns on the header only
+	bool lockFirstLine	= false; //used for count the number of colmns on the header only
+	//bool lockHeader 	= false;
+	//unsigned int i 		= 1;
 
-	this->filepath	=	cheminFichier;
+	this->filepath = cheminFichier;
 
 	ifstream fichier (cheminFichier, std::ios::in);
 	if (!fichier)
@@ -26,14 +28,19 @@ bool CSVParser::initWithFile(string cheminFichier){
 		return false; 
 	}
 	while(fichier.get(c)){
-			if(c == '\n'){
-				lockFirstLine = true;
-				this->numberOfRows += 1;
-				cout<<c<<endl;
-				cout<<"numberOfRows = "<<numberOfRows<<endl;
-			}else if(c== ',' && lockFirstLine == false){
-				this->numberOfColumns += 1;
-			}
+		
+		/*if (c == '\n' && lockHeader == false){
+			lockHeader = true;
+		}
+		*/
+		if(c == '\n'){
+			lockFirstLine = true;
+			this->numberOfRows += 1;
+			cout<<c<<endl;
+			cout<<"numberOfRows = "<<numberOfRows<<endl;
+		}else if(c== ',' && lockFirstLine == false){
+			this->numberOfColumns += 1;
+		}
 	}//end of while
 	fichier.close();
 	return true;

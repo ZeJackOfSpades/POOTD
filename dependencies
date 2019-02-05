@@ -1,3 +1,6 @@
+obj/Person.o: src/Person.cpp
+obj/PersonTest.o: src/PersonTest.cpp src/../inc/catch.hpp \
+ src/../inc/Person.hpp
 obj/CSVParser.o: src/CSVParser.cpp src/../inc/CSVParser.hpp
 obj/CSVParserTest.o: src/CSVParserTest.cpp src/../inc/catch.hpp \
  src/../inc/CSVParser.hpp

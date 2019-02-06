@@ -4,8 +4,10 @@
 using namespace std;
 
 struct Fraction{
-	int numerator;
-	int denominator;
+	int	numerator;
+	int	denominator;
 
-	string display(void);
+	string	display(void);
+
+	void	operator+(int i);	
 };

@@ -9,5 +9,7 @@ struct Fraction{
 
 	string	display(void);
 
-	void	operator+(int i);	
+	void	operator+(int i);
+	bool 	operator<(const Fraction f);
+	bool	operator>(const Fraction f);	
 };

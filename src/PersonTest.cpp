@@ -49,3 +49,10 @@ TEST_CASE("The firstName and name are not correct","[Person]"){
 	person1.firstName	=	"J@cques";
 	REQUIRE(person1.hasValidNames() == false);
 }
+
+TEST_CASE("Test getNumberOfGivenResponses() and getNumberOfPositiveResponses()","[Person]"){
+	person1.answer.numerator	=	1;
+	person1.answer.denominator	=	36;
+	REQUIRE(person1.getNumberOfGivenResponses() 	==	36);
+	REQUIRE(person1.getNumberOfPositiveResponses()	==	1);
+}

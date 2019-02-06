@@ -1,9 +1,10 @@
 obj/Fraction.o: src/Fraction.cpp src/../inc/Fraction.hpp
-obj/Person.o: src/Person.cpp src/../inc/Person.hpp
+obj/Person.o: src/Person.cpp src/../inc/Person.hpp \
+ src/../inc/../inc/Fraction.hpp
 obj/FractionTest.o: src/FractionTest.cpp src/../inc/catch.hpp \
  src/../inc/Fraction.hpp
 obj/PersonTest.o: src/PersonTest.cpp src/../inc/catch.hpp \
- src/../inc/Person.hpp
+ src/../inc/Person.hpp src/../inc/../inc/Fraction.hpp
 obj/CSVParser.o: src/CSVParser.cpp src/../inc/CSVParser.hpp
 obj/CSVParserTest.o: src/CSVParserTest.cpp src/../inc/catch.hpp \
  src/../inc/CSVParser.hpp

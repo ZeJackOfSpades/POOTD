@@ -54,3 +54,10 @@ bool Person::hasValidNames(void){
 		return true;
 	}
 }
+int	Person::getNumberOfPositiveResponses(void){
+	return this->answer.numerator;
+}
+
+int	Person::getNumberOfGivenResponses(void){
+	return this->answer.denominator;
+}

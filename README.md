@@ -1,4 +1,4 @@
-# MakefileCPP
+# TD#4 about structures
 
 This is the TD#4 about structure.
 The program count the number of rows and Columns in sondage.csv in otherFiles directory.
